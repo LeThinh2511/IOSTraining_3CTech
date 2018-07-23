@@ -7,3 +7,5 @@ Hometown: Thua Thien Hue
 Job: Student
 
 class: 15T3
+
+Age: 21
