@@ -5,3 +5,5 @@ Day of birth: 01/01/1997
 Hometown: Thua Thien Hue
 
 Job: Student
+
+class: 15T3
