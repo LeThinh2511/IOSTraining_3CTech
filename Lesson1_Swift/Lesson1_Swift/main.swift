@@ -10,6 +10,7 @@ import Foundation
 
 // let & var
 let firstConst: Int = 6
+
 var firstVar: Int = 5
 
 firstVar = 7
@@ -18,13 +19,17 @@ print(firstConst)
 
 //tuple
 print("tuple")
+
 var tuple: (num: Int, string: String, double: Double)
 tuple = (1, "le thinh", 5.6)
+
+
 print(tuple.num)
 print(tuple)
 
 //optional
 print("optional")
+
 var name: String? = "le thinh"
 if let name = name
 {
@@ -46,25 +51,18 @@ func testGuard()
 {
     let age: Int? = 21
     let job: String? = "student"
-    let country: String? = "Viet Nam"
     
-    guard let tuoi = age
-    else
+    guard let tuoi = age else
     {
         print("age is nil")
         return
     }
-    guard let nghe = job
-    else
+    guard let nghe = job else
     {
         print("job is nil")
         return
     }
-    guard let nuoc = country else
-    {
-        print("country is nil")
-    }
-    print("\(tuoi) + \(nghe) + \(nuoc)")
+    print("\(tuoi) - \(nghe)")
 }
 
 testGuard()
@@ -94,7 +92,9 @@ while i < 5
 
 print("Array - Dictionary - Set")
 
-var array: [Int]
+var array: [Int] = [1, 3]
+array[1] = 8
+
 array = [1, 3]
 print(array)
 array.append(4)
@@ -107,6 +107,8 @@ for i in array
 
 // Dictionary
 var dictionary: [String : Int] = [:]
+
+
 dictionary["one"] = 1
 dictionary["two"] = 2
 dictionary["three"] = 3
@@ -122,8 +124,8 @@ for number in dictionary
 }
 
 // Set
-
 var set: Set<String> = Set<String>()
+
 set.insert("Thinh")
 set.insert("Binh")
 set.insert("Phong")
@@ -142,10 +144,6 @@ func testFunction(name: String, age: Int) -> (String)
 {
     return "My name is \(name), I'm \(age)"
 }
-
-print(testFunction(name: "Le Thinh" , age: 21))
-
-
 
 func testPassFunctionAsAnAgument(function: (String, Int)->(String), string: String)
 {
@@ -235,7 +233,6 @@ class Vehicle
     init(color: Color) {
         self.color = color
     }
-    
     func showColor() {
         print(self.color)
     }
@@ -244,6 +241,11 @@ class Vehicle
 
 struct Animal {
     var numOfLeg: Int
+    
+    func showNumOfLeg()
+    {
+        print(self.numOfLeg)
+    }
 }
 
 class Car: Vehicle
@@ -337,3 +339,33 @@ var cat: Cat = Cat()
 cat.walk()
 cat.numOfLeg = 5
 print(cat.numOfLeg)
+
+var firstName: String?
+
+print(car.color)
+var car4: Car? = Car(color: .yellow, manufacture: "thinh")
+var car3: Car? = Car(color: .blue, manufacture: "le thinh")
+//print(car3.color)
+
+print("/////")
+print(car4!.color)
+print(car3!.color)
+
+car3 = car4
+
+print(car4!.color)
+print(car3!.color)
+
+car3?.color = .black
+print(car4!.color)
+print(car3!.color)
+
+
+
+
+
+
+
+
+
+
