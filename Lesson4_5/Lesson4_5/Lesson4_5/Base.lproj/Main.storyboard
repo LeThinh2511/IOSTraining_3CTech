@@ -33,8 +33,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYS-dl-0uK">
-                                            <rect key="frame" x="16" y="30" width="33" height="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYS-dl-0uK">
+                                            <rect key="frame" x="16" y="30" width="268" height="16"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -49,6 +49,7 @@
                                     <constraints>
                                         <constraint firstItem="POt-tY-7ht" firstAttribute="top" secondItem="gZf-DW-7xf" secondAttribute="top" id="2n2-ke-Z4C"/>
                                         <constraint firstAttribute="trailing" secondItem="IBb-6I-fXa" secondAttribute="trailing" constant="9" id="5d0-io-GAJ"/>
+                                        <constraint firstItem="DYS-dl-0uK" firstAttribute="trailing" secondItem="IBb-6I-fXa" secondAttribute="leading" id="68L-Gi-4AM"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="DYS-dl-0uK" secondAttribute="bottom" constant="8" id="J23-Th-Kec"/>
                                         <constraint firstItem="POt-tY-7ht" firstAttribute="leading" secondItem="gZf-DW-7xf" secondAttribute="leading" constant="16" id="W1g-gl-LQM"/>
                                         <constraint firstItem="DYS-dl-0uK" firstAttribute="leading" secondItem="POt-tY-7ht" secondAttribute="leading" id="eGF-gs-AN9"/>
@@ -85,7 +86,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZUt-rD-NOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="588" y="36"/>
+            <point key="canvasLocation" x="728.5" y="49.5"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="8Hk-uo-Zjy">
@@ -96,10 +97,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="u9J-pi-9X7">
-                                <rect key="frame" x="8" y="64" width="359" height="667"/>
+                                <rect key="frame" x="8" y="64" width="359" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="QnT-tJ-ljX">
-                                        <rect key="frame" x="0.0" y="0.0" width="359" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="603"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="BhL-SM-L4o">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="33"/>
@@ -152,12 +153,19 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Date Created" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q25-51-UY5">
-                                                <rect key="frame" x="0.0" y="147" width="359" height="520"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="Date Created" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q25-51-UY5">
+                                                <rect key="frame" x="0.0" y="147" width="359" height="410"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3O-pT-hGQ">
+                                                <rect key="frame" x="0.0" y="573" width="359" height="30"/>
+                                                <state key="normal" title="Back"/>
+                                                <connections>
+                                                    <action selector="goBackItem:" destination="xab-qk-qEI" eventType="touchUpInside" id="YwF-9c-a58"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="iME-JY-h8K" firstAttribute="leading" secondItem="c6x-Ma-PTe" secondAttribute="leading" id="SoN-I9-XpY"/>
@@ -171,9 +179,9 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="u9J-pi-9X7" firstAttribute="top" secondItem="gUe-ax-Oks" secondAttribute="top" id="8Tz-nf-och"/>
+                            <constraint firstItem="gUe-ax-Oks" firstAttribute="bottom" secondItem="u9J-pi-9X7" secondAttribute="bottom" id="PNg-JJ-Dfq"/>
                             <constraint firstItem="gUe-ax-Oks" firstAttribute="trailing" secondItem="u9J-pi-9X7" secondAttribute="trailing" constant="8" id="Zgy-pp-yVb"/>
                             <constraint firstItem="u9J-pi-9X7" firstAttribute="leading" secondItem="gUe-ax-Oks" secondAttribute="leading" constant="8" id="kWJ-bi-ZUI"/>
-                            <constraint firstItem="u9J-pi-9X7" firstAttribute="height" secondItem="WYU-se-M6U" secondAttribute="height" id="zZV-OP-i3i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gUe-ax-Oks"/>
                         <connections>
@@ -184,19 +192,20 @@
                         <outlet property="dateCreatedLabel" destination="q25-51-UY5" id="mEA-1Z-ua4"/>
                         <outlet property="nameTextField" destination="c6x-Ma-PTe" id="kZA-GI-aQL"/>
                         <outlet property="serialNumberTextField" destination="iME-JY-h8K" id="2e2-eO-InG"/>
-                        <outlet property="stackHeightConstraint" destination="zZV-OP-i3i" id="KdJ-Bf-5j7"/>
                         <outlet property="stackView" destination="u9J-pi-9X7" id="lPE-ZI-XbV"/>
                         <outlet property="valueTextField" destination="mWE-us-za4" id="JmI-k1-8CL"/>
+                        <segue destination="ugF-PS-J1n" kind="unwind" identifier="DetailToItem" unwindAction="unwindToItemVCWithSegue:" id="KXv-lm-qsc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1cJ-pn-5eY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ugF-PS-J1n" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="fXh-4P-7XC">
                     <connections>
                         <action selector="dismissKeyboardWith_sender:" destination="xab-qk-qEI" id="wYy-yA-6mY"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1500" y="18.440779610194905"/>
+            <point key="canvasLocation" x="1203" y="50"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QNn-C3-kg4">
@@ -214,7 +223,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aKM-Sy-HvL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-300" y="19.340329835082461"/>
+            <point key="canvasLocation" x="61" y="50"/>
         </scene>
     </scenes>
 </document>

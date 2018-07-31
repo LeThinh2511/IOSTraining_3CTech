@@ -13,7 +13,13 @@ class DetailViewController: UIViewController
     var item: Item!
     var newHeightConstraint: NSLayoutConstraint!
     
+    @IBAction func goBackItem(_ sender: Any) {
+        performSegue(withIdentifier: "DetailToItem", sender: self)
+    }
     
+    @IBAction func dismissVC(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     
     @IBOutlet weak var stackHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var stackView: UIStackView!
@@ -38,31 +44,31 @@ class DetailViewController: UIViewController
         dateCreatedLabel.text = "\(item.dateCreated)"
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+//    }
     
-    @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.stackView.frame.height == self.view.frame.height
-            {
-                stackHeightConstraint.isActive = false
-                self.newHeightConstraint = NSLayoutConstraint(item: stackView, attribute: .height, relatedBy: .equal, toItem: self.view, attribute: .height, multiplier: 1, constant: -keyboardSize.height)
-                view.addConstraint(newHeightConstraint)
-            }
-            
-        }
-    }
-    @objc func keyboardWillHide(notification: NSNotification) {
-        if self.stackView.frame.height == self.view.frame.height {
-            self.newHeightConstraint.isActive = false
-            view.removeConstraint(newHeightConstraint)
-            
-            stackHeightConstraint.isActive = true
-            view.addConstraint(stackHeightConstraint)
-        }
-    }
+//    @objc func keyboardWillShow(notification: NSNotification) {
+//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+//            if self.stackView.frame.height == self.view.frame.height
+//            {
+//                stackHeightConstraint.isActive = false
+//                self.newHeightConstraint = NSLayoutConstraint(item: stackView, attribute: .height, relatedBy: .equal, toItem: self.view, attribute: .height, multiplier: 1, constant: -keyboardSize.height)
+//                view.addConstraint(newHeightConstraint)
+//            }
+//            
+//        }
+//    }
+//    @objc func keyboardWillHide(notification: NSNotification) {
+//        if self.stackView.frame.height == self.view.frame.height {
+//            self.newHeightConstraint.isActive = false
+//            view.removeConstraint(newHeightConstraint)
+//            
+//            stackHeightConstraint.isActive = true
+//            view.addConstraint(stackHeightConstraint)
+//        }
+//    }
     
 }

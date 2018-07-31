@@ -137,4 +137,10 @@ class ItemsViewController: UITableViewController
             print("error")
         }
     }
+    
+    @IBAction func unwindToItemVC(segue: UIStoryboardSegue)
+    {
+        let detailVC = segue.source as! DetailViewController
+        print(detailVC.item.name)
+    }
 }
