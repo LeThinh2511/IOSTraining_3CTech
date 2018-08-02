@@ -43,7 +43,6 @@ class ItemsViewController: UITableViewController
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath) as! ItemCell
         
-        
         let item = itemStore.allItems[indexPath.row]
         
         cell.namelabel.text = item.name
@@ -104,9 +103,8 @@ class ItemsViewController: UITableViewController
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == itemStore.allItems.count - 1 && itemStore.allItems.count > 9
+        if indexPath.row == itemStore.allItems.count - 1
         {
-            // load more function get called
             for _ in 0..<5
             {
                 itemStore.createItem()

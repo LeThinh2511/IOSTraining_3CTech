@@ -153,19 +153,21 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="Date Created" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q25-51-UY5">
-                                                <rect key="frame" x="0.0" y="147" width="359" height="410"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3O-pT-hGQ">
-                                                <rect key="frame" x="0.0" y="573" width="359" height="30"/>
+                                                <rect key="frame" x="0.0" y="147" width="359" height="30"/>
+                                                <color key="backgroundColor" red="0.17513566950000001" green="1" blue="0.068317850590000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <state key="normal" title="Back"/>
                                                 <connections>
                                                     <action selector="goBackItem:" destination="xab-qk-qEI" eventType="touchUpInside" id="YwF-9c-a58"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="Date Created" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q25-51-UY5">
+                                                <rect key="frame" x="0.0" y="193" width="359" height="410"/>
+                                                <color key="backgroundColor" red="0.9616699219" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="iME-JY-h8K" firstAttribute="leading" secondItem="c6x-Ma-PTe" secondAttribute="leading" id="SoN-I9-XpY"/>
@@ -179,7 +181,7 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="u9J-pi-9X7" firstAttribute="top" secondItem="gUe-ax-Oks" secondAttribute="top" id="8Tz-nf-och"/>
-                            <constraint firstItem="gUe-ax-Oks" firstAttribute="bottom" secondItem="u9J-pi-9X7" secondAttribute="bottom" id="PNg-JJ-Dfq"/>
+                            <constraint firstItem="gUe-ax-Oks" firstAttribute="bottom" secondItem="u9J-pi-9X7" secondAttribute="bottom" priority="750" id="PNg-JJ-Dfq"/>
                             <constraint firstItem="gUe-ax-Oks" firstAttribute="trailing" secondItem="u9J-pi-9X7" secondAttribute="trailing" constant="8" id="Zgy-pp-yVb"/>
                             <constraint firstItem="u9J-pi-9X7" firstAttribute="leading" secondItem="gUe-ax-Oks" secondAttribute="leading" constant="8" id="kWJ-bi-ZUI"/>
                         </constraints>
@@ -192,7 +194,7 @@
                         <outlet property="dateCreatedLabel" destination="q25-51-UY5" id="mEA-1Z-ua4"/>
                         <outlet property="nameTextField" destination="c6x-Ma-PTe" id="kZA-GI-aQL"/>
                         <outlet property="serialNumberTextField" destination="iME-JY-h8K" id="2e2-eO-InG"/>
-                        <outlet property="stackView" destination="u9J-pi-9X7" id="lPE-ZI-XbV"/>
+                        <outlet property="stackView" destination="u9J-pi-9X7" id="uni-SY-bP9"/>
                         <outlet property="valueTextField" destination="mWE-us-za4" id="JmI-k1-8CL"/>
                         <segue destination="ugF-PS-J1n" kind="unwind" identifier="DetailToItem" unwindAction="unwindToItemVCWithSegue:" id="KXv-lm-qsc"/>
                     </connections>
@@ -205,7 +207,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1203" y="50"/>
+            <point key="canvasLocation" x="1460" y="63"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QNn-C3-kg4">
