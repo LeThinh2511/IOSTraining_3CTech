@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a4G-OV-yNN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Users View Controller-->
+        <scene sceneID="L2E-6y-Hqr">
+            <objects>
+                <tableViewController id="a4G-OV-yNN" customClass="UsersViewController" customModule="Lesson6_exercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wFy-4S-ZoV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserTableViewCell" rowHeight="115" id="o1X-Y7-TQb" customClass="UserTableViewCell" customModule="Lesson6_exercise" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="115"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o1X-Y7-TQb" id="Ofo-N8-eD8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="114.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1rB-nS-VUl">
+                                            <rect key="frame" x="16" y="10" width="94" height="94.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="1rB-nS-VUl" secondAttribute="height" id="i2n-AQ-ts5"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyf-qY-jkm">
+                                            <rect key="frame" x="126" y="83.5" width="17" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ok2-h3-9HF">
+                                            <rect key="frame" x="126" y="10" width="52" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1rB-nS-VUl" firstAttribute="centerY" secondItem="Ofo-N8-eD8" secondAttribute="centerY" id="GrO-HK-3jx"/>
+                                        <constraint firstItem="1rB-nS-VUl" firstAttribute="leading" secondItem="Ofo-N8-eD8" secondAttribute="leading" constant="16" id="MKl-9j-AL8"/>
+                                        <constraint firstItem="ok2-h3-9HF" firstAttribute="leading" secondItem="1rB-nS-VUl" secondAttribute="trailing" constant="16" id="P9K-F2-fmh"/>
+                                        <constraint firstItem="Hyf-qY-jkm" firstAttribute="bottom" secondItem="1rB-nS-VUl" secondAttribute="bottom" id="f3E-65-PFu"/>
+                                        <constraint firstItem="ok2-h3-9HF" firstAttribute="top" secondItem="1rB-nS-VUl" secondAttribute="top" id="m9g-xY-B7R"/>
+                                        <constraint firstItem="1rB-nS-VUl" firstAttribute="top" secondItem="Ofo-N8-eD8" secondAttribute="top" priority="750" constant="10" id="o4k-RL-hpX"/>
+                                        <constraint firstItem="Hyf-qY-jkm" firstAttribute="leading" secondItem="ok2-h3-9HF" secondAttribute="leading" id="oKP-oe-5uk"/>
+                                        <constraint firstAttribute="bottom" secondItem="1rB-nS-VUl" secondAttribute="bottom" priority="750" constant="10" id="szq-Bh-gkS"/>
+                                        <constraint firstItem="1rB-nS-VUl" firstAttribute="width" secondItem="Ofo-N8-eD8" secondAttribute="width" multiplier="1:4" id="wGL-EF-a1E"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="IDLabel" destination="Hyf-qY-jkm" id="gHs-DH-0b9"/>
+                                    <outlet property="imageCustomView" destination="1rB-nS-VUl" id="Z9b-3J-5nM"/>
+                                    <outlet property="nameLabel" destination="ok2-h3-9HF" id="iKV-CO-5Qm"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="a4G-OV-yNN" id="jdg-Uk-If1"/>
+                            <outlet property="delegate" destination="a4G-OV-yNN" id="MIK-kh-utR"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Nm-KC-DPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="151.57421289355324"/>
+        </scene>
+    </scenes>
+</document>
